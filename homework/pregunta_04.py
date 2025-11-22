@@ -20,3 +20,10 @@ def pregunta_04():
     E    4.785714
     Name: c2, dtype: float64
     """
+def pregunta_04():
+    import pandas as pd
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+    Promedio= df.groupby("c1")["c2"].mean()
+
+    return Promedio
+print(pregunta_04())
